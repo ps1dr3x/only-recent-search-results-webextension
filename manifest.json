@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Only Recent Search Results",
+  "version": "0.0.1",
+  "description": "A WebExtension that automatically sets 'Past year' setting when searching on Google.",
+  "applications": {
+    "gecko": {
+      "id": "recent@federici.tech"
+    }
+  },
+  "icons": {
+    "48": "icons/recent-48.png",
+    "96": "icons/recent-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/search?*"],
+      "js": ["src/recent.js"]
+    }
+  ]
+}
