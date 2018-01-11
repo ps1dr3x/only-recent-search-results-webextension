@@ -1,13 +1,16 @@
 {
   "manifest_version": 2,
+  "author": "Michele Federici (@ps1dr3x) <michele@federici.tech>",
   "name": "Only Recent Search Results",
   "version": "0.0.1",
   "description": "A WebExtension that automatically sets 'Past year' setting when searching on Google.",
+  "homepage_url": "https://github.com/ps1dr3x/only-recent-search-results-webextension",
   "applications": {
     "gecko": {
       "id": "recent@federici.tech"
     }
   },
+  "permissions": ["storage"],
   "icons": {
     "48": "icons/recent-48.png",
     "96": "icons/recent-96.png"
@@ -17,5 +20,13 @@
       "matches": ["*://*/search?*"],
       "js": ["src/recent.js"]
     }
-  ]
+  ],
+  "browser_action": {
+    "browser_style": true,
+    "default_popup": "src/toolbar/toolbar.html",
+    "default_icon": {
+      "16": "icons/recent-16.png",
+      "32": "icons/recent-32.png"
+    }
+  }
 }
