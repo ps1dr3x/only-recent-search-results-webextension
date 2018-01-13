@@ -48,6 +48,11 @@ body {
     margin: 4px 0 0 0;
 }
 
+.range-select {
+    width: 100%;
+    margin: 10px auto;
+}
+
 .osrw-toggle {
     width: 50px;
     height: 50px;
@@ -62,12 +67,12 @@ body {
     font-size: 25px;
     text-align: center;
     display: block;
-    margin: 0 auto;
-    background-color: rgb(238, 29, 29);
+    margin: 0 auto 5px auto;
+    background-color: rgb(201, 25, 25);
 }
 
 .osrw-toggle.active {
-    background-color: rgb(29, 238, 29);
+    background-color: rgb(23, 202, 23);
 }
 
 .osrw-toggle:hover {

@@ -3,24 +3,24 @@
   "author": "Michele Federici (@ps1dr3x) <michele@federici.tech>",
   "name": "Only Recent Search Results",
   "version": "0.0.1",
-  "description": "A WebExtension that automatically sets 'Past year' setting when searching on Google.",
+  "description": "A WebExtension that allows setting a default date range for Google search results.",
   "homepage_url": "https://github.com/ps1dr3x/only-recent-search-results-webextension",
   "applications": {
     "gecko": {
       "id": "recent@federici.tech"
     }
   },
-  "permissions": ["storage"],
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
   "icons": {
     "48": "icons/recent-48.png",
     "96": "icons/recent-96.png"
   },
-  "content_scripts": [
-    {
-      "matches": ["*://*/search?*"],
-      "js": ["src/recent.js"]
-    }
-  ],
+  "background": {
+    "scripts": ["src/background.js"]
+  },
   "browser_action": {
     "browser_style": true,
     "default_popup": "src/toolbar/toolbar.html",
